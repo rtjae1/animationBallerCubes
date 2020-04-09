@@ -26,8 +26,61 @@ body {
   position: absolute;
   top: calc(50%);
   left: calc(50%);
-  transform: translate(-50%, -50%);
-  width: 25rem;
-  height: 25rem;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 32rem;
+  height: 32rem;
+  border: 1rem solid var(--secondaryColor);
   border-radius: 4%;
+}
+
+.content span {
+  width: 10rem;
+  height: 10rem;
+  background: var(--tertiaryColor);
+  display: block;
+  float: left;
+  animation: animate 2s linear infinite;
+  border-radius: 4%;
+}
+
+.content span:nth-child(3) {
+  animation-delay: .8s;
+}
+
+.content span:nth-child(2),
+span:nth-child(6) {
+  animation-delay: .6s;
+}
+
+.content span:nth-child(1),
+span:nth-child(5),
+span:nth-child(9) {
+  animation-delay: .4s;
+}
+
+.content span:nth-child(4),
+span:nth-child(8) {
+  animation-delay: .2s;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
